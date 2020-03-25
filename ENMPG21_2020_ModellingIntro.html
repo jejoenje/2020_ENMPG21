@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>ENMPG21:  Biodiversity &amp; Ecosystem Services 2020</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jeroen Minderman (jeroen.minderman2@stir.ac.uk)" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="metropolis_jm.css" type="text/css" />
+    <link rel="stylesheet" href="metropolis_jm-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: top, left, title-slide
+
+# ENMPG21: <br>Biodiversity &amp; Ecosystem Services 2020
+## Simulation modelling in conservation decision making: why and what?
+### Jeroen Minderman (<a href="mailto:jeroen.minderman2@stir.ac.uk" class="email">jeroen.minderman2@stir.ac.uk</a>)
+### <br><br><br><br><br><br><br>25 March 2020 (<i>updated: 24/03/2020</i>)
+
+---
+
+
+
+
+
+# Overview
+
+.left-column[
+  &lt;img src="pics/popmanage_banner1.jpg" width="90%" /&gt;
+]
+
+.right-column[
+
+- What and why?
+
+{{content}}
+
+]
+
+--
+
+- Types of model
+{{content}}
+
+--
+
+  + Conceptual
+  {{content}}
+--
+  + Quantitative models
+  {{content}}
+--
+  + Individual-based models (simulation)
+{{content}}
+
+--
+
+- Example: oystercatcher IBM
+
+{{content}}
+
+--
+
+- Modelling process: steps and complexity
+
+{{content}}
+
+--
+
+- Tea break!
+
+{{content}}
+
+--
+
+- Excercises &amp; discussion
+
+{{content}}
+
+---
+
+# Why modelling?
+
+## What is it anyway?
+
+### Definitions?
+
+{{content}}
+--
+  "*a &lt;span style="color:blue"&gt;representation&lt;/span&gt; of a particular thing, idea, or &lt;span style="color:blue"&gt;condition&lt;/span&gt;.. can be as simple as a verbal statement about a subject, or two boxes connected by an arrow to represent &lt;span style="color:blue"&gt;some relationship&lt;/span&gt;.*" [(Jackson et al 2000)](https://academic.oup.com/bioscience/article/50/8/694/243278)
+
+{{content}}
+
+--
+
+"*Models represent real world phenomena in &lt;span style="color:blue"&gt;simplified forms&lt;/span&gt; in order to &lt;span style="color:blue"&gt;generate understanding&lt;/span&gt; of those phenomena; in ecology, models are typically &lt;span style="color:blue"&gt;mathematical objects&lt;/span&gt;*" [(Evans 2012)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3223798/)
+
+---
+
+# Why modelling?
+
+## What is it anyway?
+
+.left-column[
+&lt;img src="pics/oycs_square_small.jpg" width="90%" /&gt;
+&lt;img src="pics/nicholson_etal_projection.png" width="90%" /&gt;
+&lt;img src="pics/fryxell_et_al_small.png" width="90%" /&gt;
+
+]
+.right-column[
+### Examples illustrate different purposes
+{{content}}
+]
+--
+
+- **Predicting** animal distributions and/or population dynamics following disturbance or management interventions (e.g. [Stillman et al. 2001](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2001.00644.x), [Nabe-Nielsen et al. 2014](http://www.sciencedirect.com/science/article/pii/S0304380013004675))
+{{content}}
+--
+
+- **Evaluating** effect of policy interventions on species conservation (e.g. [Nicholson et al. 2019](https://linkinghub.elsevier.com/retrieve/pii/S0169534718302519))
+{{content}}
+--
+
+- **Understanding** effect of delayed management responses (e.g. [Fryxell et al. 2010](http://www.sciencemag.org/cgi/doi/10.1126/science.1185802))
+]
+
+---
+
+# Why modelling? Evaluation and uncertainty
+
+.left-column[
+&lt;img src="pics/strategic-plan.png" width="100%" /&gt;
+&lt;img src="pics/targets_set2.png" width="100%" /&gt;
+
+]
+
+.right-column[
+
+### The Aichi Biodiversity Targets 
+Convention on Biological Diversity, e.g...
+{{content}}
+]
+--
+- **Target 12**: "*By 2020 the &lt;span style="color:blue"&gt;extinction of known threatened species has been prevented&lt;/span&gt; and their conservation status, particularly of those most in decline, has been improved and sustained.*"
+{{content}}
+--
+- **Target 14**: "*By 2020, &lt;span style="color:blue"&gt;ecosystems that provide essential services&lt;/span&gt;, including services related to water, and contribute to health, livelihoods and well-being, are &lt;span style="color:blue"&gt;restored and safeguarded&lt;/span&gt;, taking into account the needs of women, indigenous and local communities, and the poor and vulnerable.*"
+
+---
+
+# Why modelling? Evaluation and uncertainty
+
+### Scenarios and Models to Support Global Conservation Targets ([Nicholson et al. 2019](https://linkinghub.elsevier.com/retrieve/pii/S0169534718302519))
+
+.pull-left[
+&lt;img src="pics/Nicholson et al 2019_fig1.jpg" width="100%" /&gt;
+]
+
+.pull-right[
+- Targets can shape policy and action...  
+{{content}}
+]
+--
+- ... **BUT** bad wording or poor understanding can lead to poor conservation outcomes
+{{content}}
+--
+- Model &lt;span style="color:blue"&gt;predictions may help evaluate possible outcomes&lt;/span&gt; (scenarios)
+{{content}}
+--
+- Facilitates systematic use of &lt;span style="color:blue"&gt;data&lt;/span&gt; &amp; representation of &lt;span style="color:blue"&gt;uncertainty&lt;/span&gt;
+
+???
+
+(Top left)
+- Trend data and indicators in black. This could be for example the number of threatened species or population trends of a selection of species of concern.
+(Top right)
+- Scenarios are model predictions based on a given set of alternative circumstances. This can play a part in not just agenda setting but also phrasing of the targets themselves, to make sure they are achievable. In this plot, the target level of a given indicator is represented by the red line, and the different scenarios in red - for example a "business as usual" scenario where nothing is done (purple), or alternative strategies in green and blue. 
+(Bottom figures)
+This is a specific example of how models and scenarios could contribute to one of the Aichi targets, target 12 - no further decrease in the number of threatened species as indicated by the Red List Index.
+The first figure represents a statistical model that would just be an extrapolation of a past trend into the future, showing the target is unlikely to be met.
+The second (bottom left) shows a similar sort of review but compared to a counterfactual in orange, that is, a situation where the current decline of species threat status is compared to a situation where nothing had been done - showing we are overall better off.
+In addition, and perhaps more interestingly, alternative ways in which models and scenarios derived from models could be used, is by comparing different policy implementations 
+
+---
+
+# Why modelling? Management complexity
+
+.pull-left[
+![](pics/barnies.jpg)
+]
+
+--
+
+.pull-right[
+&lt;img src="ENMPG21_2020_ModellingIntro_files/figure-html/unnamed-chunk-9-1.png" width="504" /&gt;
+]
+
+---
+
+# Why modelling? Management complexity
+![](pics/complexity1.jpg)
+
+---
+
+# Why modelling? Management complexity
+![](pics/complexity2.jpg)
+
+---
+
+# Why modelling? Management complexity
+
+.pull-left[
+  ![https://www.scotsman.com/news/environment/islay-s-barnacle-geese-battle-i-can-t-shoot-enough-to-make-a-difference-1-4831537](pics/cant_shoot_enough.jpg)
+[The Scotsman](https://www.scotsman.com/news/environment/islay-s-barnacle-geese-battle-i-can-t-shoot-enough-to-make-a-difference-1-4831537), November 2018
+
+]
+
+--
+
+.pull-right[
+  ![](pics/ferret_headline.jpg)
+[theferret.scot](https://theferret.scot/film-geese-shot-injured-islay/), January 2019
+]
+
+---
+
+# We're all modellers! (sort of)
+--
+.pull-left[
+![](ENMPG21_2020_ModellingIntro_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+```r
+N = rpois(1000, 100) # Sample counts
+rnorm(10000, 100, 10) # Normal distribution
+```
+]
+--
+.pull-right[
+
+- A mean of *N* is a model!
+
+- Makes assumptions
+
+- "Predicts" the most likely "true" value, given assumptions hold
+
+]
+
+
+---
+
+# Conceptual models
+
+.pull-left[
+  ![](pics/concept_simple_example.jpg)
+  ![](pics/concept_complex_example.jpg)
+]
+.pull-right[
+
+- **State variables**  
+{{content}}
+]
+--
+  Represent condition/state, e.g.
+  
+{{content}}
+--
+  - Population size
+  - Stakeholder response
+{{content}}
+--
+
+
+- **Relationships**  
+{{content}}
+--
+  Represent relationships or effects, e.g.
+  
+{{content}}
+--
+  - Effect of predation
+  - Management effects
+
+
+---
+
+# Conceptual models
+
+.pull-left[
+  ![](pics/concept_simple_example.jpg)
+  ![](pics/concept_complex_example.jpg)
+]
+.pull-right[
+
+- **Advantages**
+
+{{content}}
+]
+--
+  + Easy to understand and to communicate
+{{content}}
+--
+  + Very flexible and quick to develop
+{{content}}
+--
+  + Useful tool for planning/designing work
+{{content}}
+--
+
+- **Disadvantages**
+
+{{content}}
+--
+  + Not usually quantitative
+{{content}}
+--
+  + Can be deceptively simple
+{{content}}
+
+
+---
+
+# Quantitative models
+
+## Logistic population growth model
+
+.pull-left[
+![](ENMPG21_2020_ModellingIntro_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+  
+`\(\frac{dN}{dt}=rN\Big(1-\frac{N}{K}\Big)\)`
+
+`\(N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}\)`
+
+{{content}}
+]
+--
+- N(t) = population size at time *t*
+{{content}}
+--
+- N&lt;sub&gt;0&lt;/sub&gt; = initial population size
+{{content}}
+--
+- r = intrinsic population growth rate
+{{content}}
+--
+- K = carrying capacity
+
+
+---
+
+# Quantitative models
+
+## Logistic population growth model
+
+.pull-left[
+![](ENMPG21_2020_ModellingIntro_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+  
+`\(\frac{dN}{dt}=rN\Big(1-\frac{N}{K}\Big)\)`
+
+`\(N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}\)`
+
+- N(t) = population size at time *t*
+- N&lt;sub&gt;0&lt;/sub&gt; = initial population size
+- r = intrinsic population growth rate
+- K = carrying capacity
+
+]
+
+---
+
+# Quantitative models
+  
+## Logistic population growth model
+
+.pull-left[
+![](ENMPG21_2020_ModellingIntro_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+  
+`\(\frac{dN}{dt}=rN\Big(1-\frac{N}{K}\Big)\)`
+
+`\(N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}\)`
+
+- N(t) = population size at time *t*
+- N&lt;sub&gt;0&lt;/sub&gt; = initial population size
+- r = intrinsic population growth rate
+- K = carrying capacity
+
+]
+
+---
+
+# Quantitative models
+
+## Logistic population growth model
+
+.pull-left[
+![](ENMPG21_2020_ModellingIntro_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+  
+**Advantages**
+{{content}}
+]
+--
+- Basic quantitative models very simple
+{{content}}
+--
+- Relatively easy to fit to data  
+{{content}}
+--
+
+**Disadvantages**
+{{content}}
+--
+- N function of only one "explanatory variable"
+{{content}}
+--
+- Expanding explanatory variables can require significant maths skills
+{{content}}
+--
+- Difficult to extrapolate beyond parameterised range
+{{content}}
+--
+
+
+---
+
+# Quantitative models
+
+## More realism?
+Effects of noise and by-catch on a Danish harbour porpoise population (Nabe-Nielsen et al. 2014)
+
+![](pics/eq1.png)
+![](pics/eq2.png)
+![](pics/eq3.png)
+![](pics/eq4.png)
+
+--
+
+- Needs understanding of maths
+- Not easy to communicate to non-specialists
+- Usually very specific to case study
+
+---
+
+# Quantitative models
+
+## More realism?
+Effect of marine reserve establishment on non-cooperative fisheries management (Takashina *et al*. 2017)
+
+.pull-left[
+![](pics/takashina1.png)  
+![](pics/takashina2.png)  
+![](pics/takashina3.png)  
+![](pics/takashina4.png)  
+![](pics/takashina5.png)  
+]
+
+.pull-right[
+&lt;img src="pics/fisheries.png" width="200px" style="display: block; margin: auto;" /&gt;
+{{content}}
+]
+--
+
+- Increased realism = increased complexity
+{{content}}
+--
+
+- Hard to communicate?
+{{content}}
+--
+
+- Needs extensive technical skills to implement
+{{content}}
+
+---
+
+# Individual-based models
+
+### IBMs, "Agent-based" models
+
+&lt;img src="pics/Lomicki_cover.png" width="40%" /&gt;
+&lt;img src="pics/Sutherland_cover.png" width="40%" /&gt;
+
+---
+
+# Individual-based models
+
+&lt;img src="pics/West_etal1.jpg" width="90%" /&gt;
+
+---
+
+# Individual-based models
+
+&lt;img src="pics/West_etal2.jpg" width="90%" /&gt;
+
+---
+
+# Individual-based models
+
+&lt;img src="pics/West_etal3.jpg" width="90%" /&gt;
+
+---
+
+# Individual-based models
+
+Based around **two key principles** (per [Stillman et al. 2015](http://academic.oup.com/bioscience/article/65/2/140/2754218/Making-Predictions-in-a-Changing-World-The))
+
+{{content}}
+
+&lt;img src="pics/oycs_mussles_1.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+--
+
+**1. Emergence**
+  - Population properties arise from individuals:
+  - e.g. behaviour, physiology, genotype
+
+{{content}}
+--
+
+**2. Fitness**
+  - Individual fitness determines success (survival/reproduction)
+  - Individuals aim to maximise fitness
+  - Fitness &amp; environment linked by functions
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_3.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_4.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_5.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_6.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_7.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_8.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+IBM to predict winter mortality in Oystercatchers (*Haematopus ostralegus*)
+.center[([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))]
+&lt;img src="pics/Stillman_model_9.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Individual-based models: Oystercatchers
+
+### Model validation ([Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))
+
+.pull-left[
+### Intake rate predictions
+&lt;img src="pics/Stillman2000_8.jpg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+### Mortality predictions
+&lt;img src="pics/Stillman2000_2.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="pics/Stillman2000_3b.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Individual-based models: Oystercatchers
+
+### IBM assessing effects of disturbance ([West et al. 2000](http://www.sciencedirect.com/science/article/pii/S0006320701002579))
+
+Disturbance scenarios on feeding areas: (a) 10% of area; (b) 50% of area
+
+&lt;img src="pics/West_etal_1.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="pics/disturbances.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Individual-based models
+
+.pull-left[
+### Individual-based models
+{{content}}
+]
+--
+
+- Usually need fewer historical population data.
+{{content}}
+--
+
+- Fitness maximisation likely to hold in future - extrapolation possible
+{{content}}
+--
+
+- Individual variability implicitly accounted for.
+{{content}}
+--
+
+- Needs data on and understanding of behaviour
+{{content}}
+--
+
+- Quickly becomes very complex
+
+--
+.pull-right[
+### Population-level models
+{{content}}
+]
+--
+
+- Usually needs more historical data to "fit"
+{{content}}
+--
+
+- Limited extrapolative power
+{{content}}
+--
+
+- "Tyranny of the mean"
+{{content}}
+--
+
+- No need for individual-level data
+{{content}}
+--
+
+- Basic forms easy to build "out of the box"
+
+&lt;img src="pics/oycs_mussles_23.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Modelling process
+
+### The modelling cycle ([Schmolke *et al.* 2010](https://linkinghub.elsevier.com/retrieve/pii/S016953471000100X))
+  
+&lt;img src="pics/modelling_cycle.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+???
+
+1. Define problem / questions
+  - Response/outcome?
+  - Explanatory variables?
+2. Construct/revise model
+  - Model form?
+  - Structure
+3. Parameterise
+  - May influence (2)
+  - Literature or data collection?
+4. Predict &amp; evaluate
+  - Do predictions match observations?
+  - e.g. cross-validation
+  
+???
+
+---
+
+# Modelling process
+
+## Model complexity (1): Extremes of complexity...
+
+Both models predict population size....
+.pull-left[
+### Logistic population model
+
+`\(N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}\)`
+{{content}}
+]
+--
+- ***Four*** parameters (including *time*)
+--
+
+.pull-right[
+{{content}}
+]
+--
+### IB population model
+(e.g. [Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))
+{{content}}
+--
+&lt;img src="pics/stillman2000_sens1.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Modelling process
+
+## Model complexity (1): Extremes of complexity...
+
+Both models predict population size... directly or indirectly
+.pull-left[
+### Logistic population model
+
+`\(N(t) = \frac{KN_0}{(K-N_0)e^{-rt}+N_0}\)`
+- ***Four*** parameters (including *time*)
+]
+
+.pull-right[
+### IB population model
+(e.g. [Stillman et al. 2000](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2664.2000.00506.x))
+
+- At least **31 parameters** - likely more!
+]
+
+--
+
+.center[**Advantages? Disadvantages?**]
+
+---
+
+# Modelling process
+
+## Model complexity (2): how many parameters to draw an elephant?
+
+.pull-left[
+&lt;img src="pics/elephant.jpg" width="100%" /&gt;
+]
+
+.pull-right[
+- Adapted from [Burnham &amp; Anderson (1998)](https://books.google.co.uk/books/about/Model_Selection_and_Inference.html?id=0HHwAAAAMAAJ&amp;redir_esc=y)
+]
+
+---
+
+# Modelling process
+
+## Model complexity (2): how many parameters to draw an elephant?
+
+.pull-left[
+&lt;img src="pics/howtodrawanelephant.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Adapted from [Burnham &amp; Anderson (1998)](https://books.google.co.uk/books/about/Model_Selection_and_Inference.html?id=0HHwAAAAMAAJ&amp;redir_esc=y)
+
+{{content}}
+]
+--
+- "Bias" trades off with "variance"
+
+{{content}}
+--
+- "Overfit" vs. "underfit"
+
+{{content}}
+--
+- Complexity vs. practicality?
+
+{{content}}
+--
+- &lt;span style="color:blue"&gt;Important in applied settings&lt;/span&gt;; e.g. conservation decision making.
+
+---
+
+# Summary
+
+.left-column[
+  &lt;img src="pics/popmanage_banner1.jpg" width="90%" /&gt;
+]
+
+.right-column[
+- Models are &lt;span style="color:blue"&gt;formalised and simplified representations&lt;/span&gt; of states (e.g. populations) and relationships between states (e.g. effects)
+{{content}}
+]
+--
+
+- Models can provide... 
+{{content}}
+--
+  + &lt;span style="color:blue"&gt;Understanding&lt;/span&gt; of systems
+{{content}}
+--
+  + Make and test &lt;span style="color:blue"&gt;predictions&lt;/span&gt; where otherwise not possible
+{{content}}
+--
+  + Ability to &lt;span style="color:blue"&gt;evaluate&lt;/span&gt; alternative management options (e.g. scenarios)
+{{content}}
+--
+  - Many model &lt;span style="color:blue"&gt;types&lt;/span&gt; (e.g. conceptual to IBM)
+{{content}}
+--
+
+- Need to balance &lt;span style="color:blue"&gt;complexity&lt;/span&gt; with &lt;span style="color:blue"&gt;practicality&lt;/span&gt;
+
+---
+
+background-image: url(https://farm5.staticflickr.com/4523/38669697181_e1a6e5511c_k.jpg)
+background-position: 50% 50%
+class: center, inverse
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

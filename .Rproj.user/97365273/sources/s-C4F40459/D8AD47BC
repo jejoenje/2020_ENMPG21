@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585043774961.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D8AD47BC",
+    "lastKnownWriteTime" : 1585045583,
+    "last_content_update" : 1585045583034,
+    "path" : "~/Documents/docs/000_Teaching/2020_ENMPG21/ENMPG21_2020_ModellingIntro.Rmd",
+    "project_path" : "ENMPG21_2020_ModellingIntro.Rmd",
+    "properties" : {
+        "cursorPosition" : "16,0",
+        "docOutlineSize" : "211.97286082011524",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

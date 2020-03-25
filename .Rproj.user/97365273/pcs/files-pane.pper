@@ -1,0 +1,13 @@
+{
+    "path" : "~/Documents/docs/000_Teaching/2020_ENMPG21",
+    "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 3
+        },
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

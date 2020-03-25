@@ -1,0 +1,61 @@
+---
+title: "ENMPG21: <br>Biodiversity & Ecosystem Services 2020"
+subtitle: "Simulation modelling in conservation decision making (2): R EXCERCISES"
+author: "Jeroen Minderman (jeroen.minderman2@stir.ac.uk)"
+date: "<br><br><br><br><br><br><br>XXXXXXXX (<i>updated: `r format(Sys.Date(),'%d/%m/%Y')`</i>)"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis_jm.css", "metropolis_jm-fonts.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [top, left]
+---
+
+
+``` {r echo=FALSE}
+library(knitr)
+```
+
+# Running GMSE in R
+
+.pull-left[
+1. [Install R](https://cran.r-project.org/)
+
+2. [Install R-Studio](https://www.rstudio.com/)
+
+3. Crash course on basic use!
+
+4. [Install GMSE](https://confoobio.github.io/gmse/)
+    (*This is a package in R*)
+
+4. Running GMSE & altering parameters
+
+]
+
+.pull-right[
+```{r, out.width = "100%", echo=FALSE, out.width = "100%", fig.align="center"}
+include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png")  
+```
+<br>
+```{r, out.width = "80%", echo=FALSE, fig.align="center"}
+include_graphics("https://raw.githubusercontent.com/bradduthie/gmse/1727ea37f32f0f40df8ee6e8277d0d1723c88639/notebook/images/GMSE_logo_name.png")  
+```
+
+]
+
+---
+
+# GMSE simulations
+
+## Try answering the following questions - 
+
+1. How does the ratio between user budget and manager budget affect population change?
+
+2. How could you model increased "error" in the population? Hint: look at the GMSE help page (?gmse)
+
+3. Assess how changing the amount an individual affects the landscape interacts with different management actions?
+
+
