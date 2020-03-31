@@ -2,7 +2,7 @@
 title: "ENMPG21: <br>Biodiversity & Ecosystem Services 2020"
 subtitle: "Simulation modelling in conservation decision making (2): R EXCERCISES"
 author: "Jeroen Minderman (jeroen.minderman2@stir.ac.uk)"
-date: "<br><br><br><br><br><br><br>XXXXXXXX (<i>updated: `r format(Sys.Date(),'%d/%m/%Y')`</i>)"
+date: "<br><br><br><br><br><br><br>1 April 2020 (<i>updated: `r format(Sys.Date(),'%d/%m/%Y')`</i>)"
 output:
   xaringan::moon_reader:
     css: ["default", "metropolis_jm.css", "metropolis_jm-fonts.css"]
